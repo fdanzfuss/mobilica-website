@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilica | Mobile App Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">M</span>
+                <span class="logo-text">mobilica</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn btn-primary">Get in Touch</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>We build <span class="gradient-text">exceptional</span> mobile experiences</h1>
+                <p>Native iOS and Android development with deep expertise in GIS, cloud infrastructure, and quality assurance.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary btn-lg">Start Your Project</a>
+                    <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-demo">
+                            <div class="demo-header"></div>
+                            <div class="demo-map"></div>
+                            <div class="demo-cards">
+                                <div class="demo-card"></div>
+                                <div class="demo-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+    </header>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>What we do</h2>
+                <p>End-to-end mobile solutions tailored to your business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3>iOS Development</h3>
+                    <p>Native iPhone and iPad apps built with Swift and SwiftUI. We ensure App Store approval and deliver superior user experiences.</p>
+                    <ul class="service-tags">
+                        <li>Swift</li>
+                        <li>SwiftUI</li>
+                        <li>UIKit</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="8" y1="6" x2="16" y2="6"></line>
+                        </svg>
+                    </div>
+                    <h3>Android Development</h3>
+                    <p>Custom Android apps for smartphones and tablets using Kotlin and Java. Optimized for the Play Store ecosystem.</p>
+                    <ul class="service-tags">
+                        <li>Kotlin</li>
+                        <li>Java</li>
+                        <li>Jetpack</li>
+                    </ul>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="10" r="3"></circle>
+                            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"></path>
+                        </svg>
+                    </div>
+                    <h3>GIS & Location</h3>
+                    <p>Specialized geospatial capabilities including mapping, tracking, spatial analysis, and location-based intelligence.</p>
+                    <ul class="service-tags">
+                        <li>Mapping</li>
+                        <li>GPS</li>
+                        <li>Spatial Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Cloud Backend</h3>
+                    <p>Scalable, cost-efficient backend systems on Google Cloud Platform or AWS. Built for performance and reliability.</p>
+                    <ul class="service-tags">
+                        <li>GCP</li>
+                        <li>AWS</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Apple Watch</h3>
+                    <p>Custom watchOS apps that extend your mobile experience to the wrist. Native WatchKit development for optimal performance.</p>
+                    <ul class="service-tags">
+                        <li>watchOS</li>
+                        <li>WatchKit</li>
+                        <li>HealthKit</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Comprehensive testing on physical devices. Manual and automated testing to ensure your app meets the highest standards.</p>
+                    <ul class="service-tags">
+                        <li>Manual Testing</li>
+                        <li>Automation</li>
+                        <li>CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Built on expertise, driven by quality</h2>
+                <p>Mobilica is a South African software development company specializing in mobile applications. We've been crafting native mobile experiences since the early days of the App Store.</p>
+                <p>Our focus on native development means your app takes full advantage of platform capabilities — delivering the performance and user experience your customers expect.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-value">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">Native</span>
+                        <span class="stat-label">Development Only</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">GIS</span>
+                        <span class="stat-label">Specialists</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Let's build something great</h2>
+                <p>Ready to start your mobile project? Get in touch and let's discuss how we can help.</p>
+                <a href="mailto:ferdie@mobilica.co.za" class="btn btn-primary btn-lg">
+                    ferdie@mobilica.co.za
+                </a>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/company/mobilica" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mobilica (Pty) Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
