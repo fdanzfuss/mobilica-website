@@ -1,0 +1,262 @@
+:root {
+  --ink: #ffffff;
+  --muted: #f1f5f9;
+  --soft: #0f172a;
+  --surface: #050816;
+  --surface-blue: #050816;
+  --line: #f8fafc;
+  --brand: #ffe45e;
+  --brand-strong: #ffe45e;
+  --aqua: #64f4ff;
+  --violet: #ff7ad9;
+  --shadow: none;
+}
+
+body {
+  background: #050816;
+  color: #ffffff;
+}
+
+a,
+button,
+input,
+textarea {
+  outline-color: #ffe45e;
+}
+
+.site-header {
+  background: #050816;
+  border-bottom-color: #ffffff;
+  backdrop-filter: none;
+}
+
+.brand {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: none;
+}
+
+.skip-link {
+  color: #050816;
+  background: #ffe45e;
+}
+
+.button-primary,
+.service-icon,
+.timeline-list span {
+  color: #050816;
+  background: #ffe45e;
+  box-shadow: none;
+}
+
+.nav-links,
+.hero-copy > p:not(.eyebrow),
+.service-card p,
+.contact-copy p:not(.eyebrow),
+.projects-hero-copy > p:not(.eyebrow),
+.projects-summary span,
+.project-card p:not(.project-meta),
+.project-description p,
+.contact-details p,
+.timeline-copy p:not(.eyebrow),
+.timeline-list p {
+  color: #f1f5f9;
+}
+
+.nav-links a:hover,
+.eyebrow,
+h1 span,
+.project-meta,
+.projects-summary strong {
+  color: #ffe45e;
+}
+
+.nav-links a {
+  border-left-color: rgba(255, 255, 255, 0.55);
+}
+
+.theme-toggle {
+  color: #050816;
+  background: #ffe45e;
+  border-color: #ffe45e;
+}
+
+.theme-toggle[aria-pressed="true"] {
+  color: #050816;
+  background: #64f4ff;
+  border-color: #64f4ff;
+}
+
+.text-size-controls {
+  background: #0b1024;
+  border-color: #ffffff;
+}
+
+.text-size-button {
+  color: #ffe45e;
+}
+
+.text-size-button + .text-size-button {
+  border-left-color: #ffffff;
+}
+
+.text-size-button:disabled {
+  color: #f1f5f9;
+}
+
+.read-more-button {
+  color: #050816;
+  background: #ffe45e;
+  border-color: #ffe45e;
+}
+
+.project-description:not(.is-expanded).has-overflow::after {
+  background: linear-gradient(180deg, rgba(11, 16, 36, 0), #0b1024 82%);
+}
+
+.menu-button,
+.button-secondary,
+.signal-card,
+.service-card,
+.contact-link-panel,
+.projects-summary div,
+.project-card,
+.project-card-placeholder,
+.client-grid div,
+.timeline-list article {
+  color: #ffffff;
+  background: #0b1024;
+  border-color: #ffffff;
+  box-shadow: none;
+}
+
+.client-grid .client-logo-card {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.project-card-placeholder span {
+  color: #050505;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.menu-button span {
+  background: #ffffff;
+}
+
+.hero,
+.projects-hero,
+.contact {
+  background: #050816;
+}
+
+.services,
+.project-section,
+.previous-project-section,
+.clients-section {
+  background: #080d1e;
+}
+
+.expertise,
+.project-timeline,
+.site-footer {
+  color: #ffffff;
+  background: #000000;
+}
+
+.expertise .eyebrow,
+.expertise p,
+.site-footer {
+  color: #ffffff;
+}
+
+.stats div {
+  background: #0b1024;
+  border-color: #ffffff;
+}
+
+.stats span {
+  color: #f1f5f9;
+}
+
+.phone {
+  border-color: #ffffff;
+  background: #000000;
+  box-shadow: none;
+}
+
+.phone::before {
+  background: #ffffff;
+}
+
+.phone-screen,
+.app-row span {
+  background: #0b1024;
+  box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.map-panel {
+  border-color: #ffe45e;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+    #111936;
+}
+
+.route-dot {
+  border-color: #050816;
+  background: #ffe45e;
+  box-shadow: none;
+}
+
+.route-dot-c {
+  background: #64f4ff;
+}
+
+.service-card li,
+.project-card li {
+  color: #050816;
+  background: #ffe45e;
+  border-color: #ffe45e;
+}
+
+label {
+  color: #ffffff;
+}
+
+input,
+textarea {
+  color: #ffffff;
+  background: #050816;
+  border-color: #ffffff;
+}
+
+input:focus,
+textarea:focus,
+.button:focus,
+.theme-toggle:focus,
+.text-size-button:focus,
+.menu-button:focus,
+a:focus {
+  outline: 3px solid #ffe45e;
+  outline-offset: 3px;
+}
+
+.project-card img,
+.project-card-placeholder {
+  background: #ffffff;
+  filter: contrast(1.25) saturate(0.75);
+}
+
+@media (max-width: 900px) {
+  .nav-links.is-open {
+    background: #0b1024;
+    border-color: #ffffff;
+    box-shadow: none;
+  }
+
+  .nav-links.is-open a {
+    border-top-color: #ffffff;
+  }
+}
