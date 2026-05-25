@@ -21,6 +21,21 @@ html {
   font-size: var(--base-font-size, 16px);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 html[data-text-size="small"] {
   --base-font-size: 14px;
 }
@@ -145,15 +160,23 @@ button:focus-visible,
 }
 
 .theme-toggle {
-  min-height: 44px;
-  padding: 0 16px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  place-items: center;
   border: 1px solid var(--line);
   border-radius: 10px;
   color: var(--brand-strong);
   background: #fff;
   font: inherit;
-  font-weight: 800;
   cursor: pointer;
+}
+
+.theme-toggle-symbol {
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .theme-toggle[aria-pressed="true"] {
@@ -282,7 +305,7 @@ h1 span {
 
 .button-primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--brand), var(--violet));
+  background: linear-gradient(135deg, var(--brand-strong), #5f46e8);
   box-shadow: 0 16px 36px rgba(79, 124, 255, 0.28);
 }
 
@@ -448,7 +471,7 @@ h2 {
   place-items: center;
   border-radius: 12px;
   color: #fff;
-  background: linear-gradient(135deg, var(--brand), var(--aqua));
+  background: linear-gradient(135deg, var(--brand-strong), #087a8d);
   font-size: 0.78rem;
   font-weight: 900;
 }
@@ -550,45 +573,76 @@ h2 {
 
 .contact-link-panel {
   display: grid;
-  gap: 16px;
-  align-content: center;
-  padding: 28px;
+  gap: 24px;
+  align-content: start;
+  padding: clamp(28px, 4vw, 42px);
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #f7fbff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 251, 255, 0.96)),
+    #f7fbff;
   box-shadow: var(--shadow);
+}
+
+.contact-panel-heading {
+  display: grid;
+  gap: 10px;
 }
 
 .contact-link-panel h3 {
   margin-bottom: 0;
   font-size: clamp(1.45rem, 3vw, 2.25rem);
+  line-height: 1.05;
 }
 
 .contact-link-panel p {
+  max-width: 560px;
+  margin-bottom: 0;
   color: var(--muted);
 }
 
-.contact-link-panel .button {
-  justify-self: start;
-}
-
-.contact-details {
+.contact-action-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  padding-top: 18px;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 0.76fr);
+  gap: clamp(22px, 4vw, 34px);
+  align-items: start;
+  padding-top: 24px;
   border-top: 1px solid var(--line);
 }
 
-.contact-details h4 {
+.contact-enquiry {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.contact-kicker {
+  color: var(--brand-strong);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.contact-action-row .button {
+  margin-top: 6px;
+  justify-self: start;
+}
+
+.contact-address {
+  margin: 0;
+  padding-left: clamp(20px, 3vw, 32px);
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  font-style: normal;
+}
+
+.contact-address strong {
+  display: block;
   margin: 0 0 8px;
   color: var(--ink);
   font-size: 1rem;
-}
-
-.contact-details p {
-  margin-bottom: 0;
-  color: var(--muted);
+  font-weight: 800;
 }
 
 label {
@@ -876,6 +930,9 @@ textarea {
   flex-wrap: wrap;
   gap: 18px;
   justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .client-groups {
@@ -889,7 +946,7 @@ textarea {
   line-height: 1.1;
 }
 
-.client-grid div {
+.client-grid li {
   display: grid;
   min-height: 116px;
   place-items: center;
@@ -992,7 +1049,7 @@ textarea {
   place-items: center;
   border-radius: 14px;
   color: #fff;
-  background: linear-gradient(135deg, var(--brand), var(--aqua));
+  background: linear-gradient(135deg, var(--brand-strong), #087a8d);
   font-weight: 900;
 }
 
@@ -1086,10 +1143,6 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .contact-details {
-    grid-template-columns: 1fr;
-  }
-
   .client-grid .client-logo-card {
     max-width: 100%;
   }
@@ -1115,11 +1168,12 @@ textarea {
   }
 
   .theme-toggle {
-    min-height: 38px;
-    max-width: 78px;
-    padding: 0 6px;
-    font-size: 0.62rem;
-    line-height: 1.05;
+    width: 38px;
+    height: 38px;
+  }
+
+  .theme-toggle-symbol {
+    font-size: 1.15rem;
   }
 
   .text-size-button {
@@ -1169,6 +1223,17 @@ textarea {
 
   .button {
     width: 100%;
+  }
+
+  .contact-action-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-address {
+    padding-top: 20px;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
 
   .projects-hero {

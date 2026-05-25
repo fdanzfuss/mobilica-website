@@ -21,8 +21,8 @@
           <a href="#organisations">Clients</a>
           <a href="#contact">Contact</a>
         </nav>
-        <button class="theme-toggle" type="button" aria-pressed="false">
-          High contrast
+        <button class="theme-toggle" type="button" aria-label="High contrast theme" aria-pressed="false" title="High contrast">
+          <span class="theme-toggle-symbol" aria-hidden="true">◐</span>
         </button>
         <div class="text-size-controls" role="group" aria-label="Text size controls">
           <button class="text-size-button" type="button" data-text-size="decrease" aria-label="Decrease text size">A-</button>
@@ -30,9 +30,9 @@
         </div>
         <span class="text-size-status sr-only" aria-live="polite">Text size normal</span>
         <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </button>
       </div>
     </header>
@@ -179,9 +179,9 @@
         </div>
       </section>
 
-      <section class="section clients-section" id="organisations">
+      <section class="section clients-section" id="organisations" aria-labelledby="clients-heading">
         <div class="section-heading">
-          <h2>Our Clients</h2>
+          <h2 id="clients-heading">Our Clients</h2>
           <p>
             Mobilica strives to build long-term relationships with clients by
             providing excellent service and helping them implement cutting-edge
@@ -189,52 +189,54 @@
           </p>
         </div>
 
-        <div class="client-grid" aria-label="Mobilica clients">
-          <div class="client-logo-card">
+        <ul class="client-grid" aria-label="Mobilica clients">
+          <li class="client-logo-card">
             <img class="client-logo client-logo-1map" src="assets/1map-logo.png" alt="1Map logo">
-          </div>
-          <div class="client-logo-card">
+          </li>
+          <li class="client-logo-card">
             <img class="client-logo client-logo-afrigis" src="assets/afrigis-logo.png" alt="AfriGIS logo">
-          </div>
-          <div class="client-logo-card">
+          </li>
+          <li class="client-logo-card">
             <img class="client-logo client-logo-cat" src="assets/cat-logo.webp" alt="CAT logo">
-          </div>
-          <div class="client-logo-card">
+          </li>
+          <li class="client-logo-card">
             <img class="client-logo client-logo-28east" src="assets/28east-logo.avif" alt="28East logo">
-          </div>
-          <div class="client-logo-card">
+          </li>
+          <li class="client-logo-card">
             <img class="client-logo client-logo-oltio" src="assets/oltio-logo.png" alt="Oltio logo">
-          </div>
-          <div class="client-logo-card">
+          </li>
+          <li class="client-logo-card">
             <img class="client-logo client-logo-codefusion" src="assets/codefusion-logo.png" alt="CodeFusion logo">
-          </div>
-          <div class="client-logo-card">
+          </li>
+          <li class="client-logo-card">
             <img class="client-logo client-logo-waterston" src="assets/waterston-logo.png" alt="Waterston logo">
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
 
-      <section class="section contact" id="contact">
+      <section class="section contact" id="contact" aria-labelledby="contact-heading">
         <div class="contact-copy">
           <p class="eyebrow">Start a conversation</p>
-          <h2>Let's build something great</h2>
+          <h2 id="contact-heading">Let's build something great</h2>
           <p>Thanks for your interest in Mobilica's services. Use the contact form and the team will get back to you soon.</p>
         </div>
         <div class="contact-link-panel">
-          <h3>Contact Mobilica</h3>
-          <p>Share a few details about your project through Google Forms.</p>
-          <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeswxNZ2rpdoeHeZK0V4PDUwyZztKdqEFPEk7HwWv91hWQWCw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" aria-label="Contact Mobilica using Google Forms, opens in a new tab">
-            Contact Us
-          </a>
-          <div class="contact-details" aria-label="Mobilica contact details">
-            <div>
-              <h4>Physical Address</h4>
-              <p>1353 De Villebois Mareuil Dr<br>Moreleta Park<br>Pretoria<br>South Africa<br>0081</p>
+          <div class="contact-panel-heading">
+            <h3>Contact Mobilica</h3>
+            <p>Tell us about your project and the team will get back to you soon.</p>
+          </div>
+          <div class="contact-action-row">
+            <div class="contact-enquiry">
+              <span class="contact-kicker">Project enquiries</span>
+              <p>Use the secure Google Form to share scope, timing, and the best way to reach you.</p>
+              <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeswxNZ2rpdoeHeZK0V4PDUwyZztKdqEFPEk7HwWv91hWQWCw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                Contact Us <span class="sr-only">(opens in a new tab using Google Forms)</span>
+              </a>
             </div>
-            <div>
-              <h4>Mobilica (Pty) Ltd</h4>
-              <p>Reg. no.: 2013/052384/07<br>VAT no.: 4440263673<br>BBBEE Level 4</p>
-            </div>
+            <address class="contact-address" aria-label="Physical address">
+              <strong>Physical Address</strong>
+              1353 De Villebois Mareuil Dr<br>Moreleta Park<br>Pretoria<br>South Africa<br>0081
+            </address>
           </div>
         </div>
       </section>

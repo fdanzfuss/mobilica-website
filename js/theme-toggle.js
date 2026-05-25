@@ -26,7 +26,7 @@
 
     toggles.forEach(function (toggle) {
       toggle.setAttribute("aria-pressed", String(enabled));
-      toggle.textContent = enabled ? "Default theme" : "High contrast";
+      toggle.title = enabled ? "Default theme" : "High contrast";
     });
 
     try {
@@ -142,19 +142,36 @@
   window.addEventListener("resize", refreshReadMoreControls);
 
   if (menuButton && primaryNav) {
+    function closeMenu() {
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open menu");
+      primaryNav.classList.remove("is-open");
+    }
+
     menuButton.addEventListener("click", function () {
       var isOpen = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", String(!isOpen));
-      menuButton.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
-      primaryNav.classList.toggle("is-open", !isOpen);
+
+      if (isOpen) {
+        closeMenu();
+        return;
+      }
+
+      menuButton.setAttribute("aria-expanded", "true");
+      menuButton.setAttribute("aria-label", "Close menu");
+      primaryNav.classList.add("is-open");
     });
 
     primaryNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Open menu");
-        primaryNav.classList.remove("is-open");
+        closeMenu();
       });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+        closeMenu();
+        menuButton.focus();
+      }
     });
   }
 })();

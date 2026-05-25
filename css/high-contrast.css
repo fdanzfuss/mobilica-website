@@ -57,7 +57,7 @@ textarea {
 .projects-summary span,
 .project-card p:not(.project-meta),
 .project-description p,
-.contact-details p,
+.contact-address,
 .timeline-copy p:not(.eyebrow),
 .timeline-list p {
   color: #f1f5f9;
@@ -122,7 +122,7 @@ h1 span,
 .projects-summary div,
 .project-card,
 .project-card-placeholder,
-.client-grid div,
+.client-grid li,
 .timeline-list article {
   color: #ffffff;
   background: #0b1024;
